@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+
+#navbar-pinterest {
+  padding: 10px;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+#navbar-pinterest a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Search bar */
+
+.finder {
+  border-radius: 50px;
+  padding: 15px;
+  background-color: rgb(227, 227, 227);
+  width: 500px;
+}
+
+/* Iconos */
+
+.icons-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.icons-pinterest {
+  width: 30px;
+  margin: 10px;
+  padding-right: 50px;
+}
+
+.icons-pinterest img {
+  width: 100%;
+  height: auto;
+}
+
+/* Main */
+
+#content {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+/* Imagenes */
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-image {
+  position: relative;
+  width: 200px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.card-image:hover {
+  border: 2px;
+  box-shadow: 0 0 10px;
+}
+
+.save-button {
+  /* Estilos del botón */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 15px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-image:hover .save-button {
+  opacity: 1;
+}
+
+/* Media Querie Celular */
+
+@media (max-width: 768px) {
+  #navbar-pinterest {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .finder {
+    margin-top: 10px;
+  }
+
+  #content {
+    padding: 10px;
+  }
+}
